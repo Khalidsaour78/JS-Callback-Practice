@@ -3,10 +3,28 @@ move(inventory).to(0, 0)
 
 const character = newImage('assets/green-character/static.gif')
 let direction = null;
-direction = 'east'
 let x = 100;
 let y = 250;
 move(character).to(100, 250)
+
+//Changing character's direction with arrow keys
+document.addEventListener('keydown', function(e){
+    if(e.repeat) return;
+
+    if(e.key === 'ArrowLeft'){
+        direction = 'west'
+    }
+    if(e.key === 'ArrowUp'){
+        direction = 'north'
+    }
+    if(e.key === 'ArrowRight'){
+        direction = 'east'
+    }
+    if(e.key === 'ArrowDown'){
+        direction = 'south'
+    }
+})
+
 
 //Defining the moveCharacter callback function inline 
 setInterval (function (){
