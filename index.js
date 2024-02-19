@@ -6,7 +6,10 @@ let direction = null;
 direction = 'east'
 let x = 100;
 let y = 250;
-function moveCharacter(){
+move(character).to(100, 250)
+
+//Defining the moveCharacter callback function inline 
+setInterval (function (){
 	if(direction === 'west'){
 		x = x - 1
 	}
@@ -21,9 +24,7 @@ function moveCharacter(){
 	}
 	character.style.left = x + 'px'
 	character.style.bottom = y + 'px'
-}
-setInterval(moveCharacter, 1)//Calling the the call back function moveCharacter severally after evry 1 milisecond
-move(character).to(100, 250)
+}, 1)
 
 
 move(newImage('assets/tree.png')).to(200, 450)
