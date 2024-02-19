@@ -7,6 +7,11 @@ let x = 100;
 let y = 250;
 move(character).to(100, 250)
 
+//Making the character stop moving when  ArrowKey is not pressed
+document.addEventListener('keyup', function(e){
+    direction = null
+})
+
 //Changing character's direction with arrow keys
 document.addEventListener('keydown', function(e){
     if(e.repeat) return;
