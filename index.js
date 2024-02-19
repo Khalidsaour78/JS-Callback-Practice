@@ -22,6 +22,7 @@ function moveCharacter(){
 	character.style.left = x + 'px'
 	character.style.bottom = y + 'px'
 }
+setInterval(moveCharacter, 1)//Calling the the call back function moveCharacter severally after evry 1 milisecond
 move(character).to(100, 250)
 
 
