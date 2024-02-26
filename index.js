@@ -23,7 +23,7 @@ function handleDirectionChange(direction){
     }
 }
 
-move(character).withArrowKeys(100, 250)
+move(character).withArrowKeys(100, 250, handleDirectionChange)
 
 move(newImage('assets/tree.png')).to(200, 450)
 move(newImage('assets/pillar.png')).to(350, 250)
