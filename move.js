@@ -50,12 +50,12 @@ function move(element) {
 				direction = 'south'
 			}
 
-			whenDirectionChanges()
+			whenDirectionChanges(direction)
 		})
 		
 		document.addEventListener('keyup', function(e){
 			direction = null
-			whenDirectionChanges()
+			whenDirectionChanges(direction)
 		})
 	}
 
